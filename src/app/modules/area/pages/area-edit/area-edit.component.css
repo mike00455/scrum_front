@@ -1,0 +1,33 @@
+.conteiner{
+  padding: 30px 0 0 20px;
+}
+
+input:focus {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+button:focus {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.paragraph{
+  margin-bottom: 20px;
+}
+
+.btn-primary{
+  background-color: #219ebc;
+  border: 1px solid #219ebc;
+}
+
+
+
+/*.conteiner{*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  height: 100%;*/
+/*}*/

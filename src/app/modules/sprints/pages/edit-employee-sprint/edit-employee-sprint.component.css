@@ -1,0 +1,71 @@
+.title {
+  align-items: center;
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 6px;
+  text-align: center;
+  justify-items: center;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: 2rem 2rem;
+  overflow-x: scroll;
+}
+
+
+.space{
+  padding: 1px 8px 1px 6px;
+}
+
+input:focus {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+button:focus {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.mr-sm{
+  margin-right: 20px;
+}
+
+.btn-primary{
+  background-color: #219ebc;
+  border: 1px solid #219ebc;
+}
+.input-group input{
+  margin-top: 10px;
+  width: 300px;
+}
+
+.container-edit{
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.card::after{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #274f5b;
+  filter: blur(6px);
+  z-index: -1;
+}
+.btns-edit{
+  margin-top:60px;
+}
+.title-employee p{
+ font-size: 22px;
+}
+
+

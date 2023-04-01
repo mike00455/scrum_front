@@ -1,0 +1,110 @@
+<div class="container">
+<div class="title">
+  <p> Editar historia de usuario</p>
+</div>
+
+<div class="form-row align-items-center">
+  <form class="subprojects-form" [formGroup]="userStoryForm" (ngSubmit)="edit()">
+
+    <div class="input-group mb-3">
+      <label class="mr-sm ">Elija el nombre del subproyecto</label>
+      <select class="custom-select space" formControlName="subProjectId">
+        <option value="1">Enlace Store</option>
+        <option value="2">Eon</option>
+      </select>
+    </div>
+
+    <div class="input-group mb-3 ">
+      <label class="mr-sm ">Estado</label>
+      <div class="label-text">
+        <select class="custom-select space" formControlName="userStoryStateId">
+          <option value="1">Creado</option>
+          <option value="2">En Desarrollo</option>
+          <option value="3">Desarrollado</option>
+          <option value="4">Anulado</option>
+          <option value="5">Refinado</option>
+          <option value="6">Pausado</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <form>
+        <div class="form-group">
+          <label class="mr-sm ">Archivo</label>
+          <input type="file" class="form-control-file" formControlName="userStoryArchive">
+        </div>
+      </form>
+    </div>
+
+    <div class="input-group input-group-sm mb-3 ">
+      <div class="input-group-prepend">
+        <span class="mr-sm ">Nombre Historia de usuario</span>
+      </div>
+      <label class="col-sm-3">
+        <input type="text" class="form-control" formControlName="userStoryName">
+      </label>
+    </div>
+
+    <button class="btn btn btn-primary mb-2 " type="submit" (click)="edit()">Editar</button>
+  </form>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container">-->
+<!--  <div>-->
+<!--    <form class="subproject-form" [formGroup]="userStoryForm" (ngSubmit)="edit()">-->
+
+<!--      <div class="input-group">-->
+<!--        <div class="input-fill">-->
+<!--          <span>Elija el subproyecto</span>-->
+
+<!--          <select formControlName="subProjectId">-->
+<!--            <option value="1">Enlace store</option>-->
+<!--            <option value="2">Eon</option>-->
+<!--          </select>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="input-group">-->
+<!--        <div class="input-fill">-->
+<!--          <span>Estado</span>-->
+<!--          <select formControlName="userStoryStateId">-->
+<!--            <option value="1">Creado</option>-->
+<!--            <option value="2">En Desarrollo</option>-->
+<!--            <option value="3">Desarrollado</option>-->
+<!--            <option value="4">Anulado</option>-->
+<!--            <option value="5">Refinado</option>-->
+<!--            <option value="6">Pausado</option>-->
+<!--          </select>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="input-group">-->
+<!--        <div class="input-fill_file">-->
+<!--          <span>Archivo</span>-->
+<!--          <input type="file" formControlName="userStoryArchive">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="input-group">-->
+<!--        <div class="input-fill">-->
+<!--          <span>Nombre historia de usuario</span>-->
+<!--          <input type="text"  formControlName="userStoryName" >-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <button mat-flat-button class="btn-login" type="submit" (click)="edit()">Editar Historia</button>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->

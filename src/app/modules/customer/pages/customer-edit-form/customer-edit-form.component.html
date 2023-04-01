@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="title">
+    <p>Editar cliente</p>
+  </div>
+
+  <div>
+    <form [formGroup]="customerForm" (ngSubmit)="edit()">
+      <div class="input-group mb-3">
+        <label class="mr-sm ">NIT de la empresa</label>
+        <label class="col-sm-3">
+          <input type="text" class="form-control" placeholder="Ingrese el NIT" formControlName="clientNit">
+        </label>
+      </div>
+
+      <div class="input-group mb-3">
+        <label class="mr-sm ">Razón social</label>
+        <label class="col-sm-3">
+          <input type="text" class="form-control" placeholder="Ingrese la razón social"
+                 formControlName="clientName">
+        </label>
+      </div>
+      <button class="btn btn btn-primary mb-2 " type="submit" [disabled]="customerForm.invalid">Editar</button>
+    </form>
+  </div>
+</div>
+
+
+<!--<div class="container">-->
+<!--  <div>-->
+<!--    <form [formGroup]="customerForm" (ngSubmit)="edit()">-->
+<!--      <div class="input-group">-->
+<!--        <div class="input-fill_file">-->
+<!--          <span>NIT de la Empresa</span>-->
+<!--          <input type="text" placeholder="Dijite el Nit" formControlName="clientNit">-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--      <div class="input-group">-->
+<!--        <div class="input-fill_file">-->
+<!--          <span>Razón Social</span>-->
+<!--          <input type="text" placeholder="Dijite la Razon social" formControlName="clientName">-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <button mat-flat-button class="btn-login" [disabled]="customerForm.invalid">Editar</button>-->
+<!--    </form>-->
+<!--  </div>-->
+
+<!--</div>-->

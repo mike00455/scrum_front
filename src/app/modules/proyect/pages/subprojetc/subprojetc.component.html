@@ -1,0 +1,41 @@
+<div class="container">
+  <span class="title">Gestionar Subproyectos</span>
+  <nav class="navbar navbar-light bg-light">
+    <p>Realice la busqueda correspondiente de los subproyectos para listar</p>
+    <div class="search">
+      <input class="form-control mr-sm" type="search" placeholder="Buscar subproyecto" aria-label="Search">
+      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+  </nav>
+
+
+  <div class="title">
+    <p>Lista de Subproyectos</p>
+  </div>
+  <div class="content">
+    <button type="button" class="btn btn-primary mb-2" [routerLink]="['/app/proyect/subproject-add']">Agregar
+      subproyecto
+    </button>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead class="thead-ligth">
+      <tr>
+        <th scope="row" class="title_table">Nombre del subproyecto</th>
+        <th scope="row" class="title_table">Proyecto</th>
+        <th scope="row" class="title_table icon">Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of subproject">
+        <td>{{item.subProjectName}}</td>
+        <td>{{item.projectName}}</td>
+        <td class="icon">
+          <button type="button" class="btn btn-success" [routerLink]="['/app/proyect/subproject-edit', item.subProjectId]"><i class="fas fa-edit"></i></button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

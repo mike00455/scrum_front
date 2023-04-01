@@ -1,0 +1,140 @@
+
+.title {
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.space{
+  padding: 1px 8px 1px 6px;
+}
+
+.label-text{
+  padding-left: 10px;
+}
+
+.subtitle{
+  margin-top: 25px;
+}
+
+
+.title_table{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+input:focus {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+button:focus {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+
+.table{
+  box-shadow: 2px 2px 5px #999;
+}
+
+.thead-ligth{
+  background-color: #e5e6e4;
+  color: black;
+}
+
+.mr-sm{
+  margin-right: 20px;
+}
+
+.btn-primary{
+  background-color: #219ebc;
+  border: 1px solid #219ebc;
+}
+
+.icon{
+  text-align: center;
+}
+
+/*body{*/
+/*  font-family: 'Dosis', sans-serif;*/
+/*}*/
+/*.container{*/
+/*  margin-top: 20px;*/
+/*}*/
+/*.container h2{*/
+/*  color: #233738;*/
+/*}*/
+/*.subproject-form{*/
+/*  display: block;*/
+/*  width: 85%;*/
+/*  text-align: center;*/
+/*  text-decoration: none;*/
+/*  margin-bottom: 1.3rem;*/
+/*  font-weight: 500;*/
+/*  transition: .3s ease-in-out all;*/
+/*}*/
+/*.input-group{*/
+/*  position: relative;*/
+/*  width: 60%;*/
+/*  margin: 0 auto;*/
+/*  margin-bottom: 1.5rem;*/
+/*  margin-top: 1.5rem;*/
+/*}*/
+/*.input-fill input{*/
+/*  border:none;*/
+/*  border-bottom: 3px solid #848f9a;*/
+/*}*/
+/*.input-fill input:focus{*/
+/*  outline: none;*/
+/*  border-color: #00e4ff;*/
+/*}*/
+/*.input-fill span{*/
+/*  margin-right: 10px;*/
+/*  font-size: 1.2rem;*/
+/*  color: #175859;*/
+/*}*/
+/*.input-fill_file span{*/
+/*  margin-right: 10px;*/
+/*  font-size: 1.2rem;*/
+/*  color: #175859;*/
+/*}*/
+
+/*.btn-login{*/
+/*  border-radius: 3rem;*/
+/*  border: 1px solid ;*/
+/*  height: 40px;*/
+/*  background-color: deepskyblue;*/
+/*  font-size: 1.3rem;*/
+/*  color: #ffffff;*/
+/*  transition: .3s ease-in-out all;*/
+/*  font-weight: 450;*/
+/*  cursor: pointer;*/
+/*}*/
+/*.btn-login-table{*/
+/*  border: 1px solid ;*/
+/*  height: 40px;*/
+/*  background-color: deepskyblue;*/
+/*  font-size: 1.3rem;*/
+/*  color: #ffffff;*/
+/*  transition: .3s ease-in-out all;*/
+/*  font-weight: 400;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*.table{*/
+/*  margin-top: 20px;*/
+/*}*/
+
+
+
+
+
+

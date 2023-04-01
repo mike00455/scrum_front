@@ -1,0 +1,13 @@
+.content-footer {
+  width: 100%;
+  background: #e5e5e5;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 16px;
+}
+
+.content-footer small {
+  color: black;
+}

@@ -1,0 +1,52 @@
+<div class="container">
+  <h2 class="title">Gestion de Equipos</h2>
+  <div class="form-row align-items-center">
+    <form class="manage-teams-form" [formGroup]="manageTeamsForm" (ngSubmit)="saveTeams()">
+
+      <div class="input-group mb-3">
+        <label class="mr-sm">
+          <span class="mr-sm">Seleccione el Area</span>
+          <select class="form-select mt-2" formControlName="areaId">
+            <option value="{{item.areaId}}" *ngFor="let item of areas">{{item.areaName}}</option>
+          </select>
+        </label>
+      </div>
+      <div class="input-group">
+        <label class="input-fill">
+          <span class="mr-sm">Nombre del Equipo</span>
+          <input type="text" class="form-control" placeholder="Escriba el nombre del Equipo" formControlName="teamName">
+        </label>
+      </div>
+      <button class="btn btn btn-primary mb-2" type="submit" [disabled]="manageTeamsForm.invalid">Guardar</button>
+    </form>
+  </div>
+  <div class="title">
+    <p class="subtitle">Equipos</p>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-condensed table-hover ">
+      <thead class="thead-ligth">
+      <tr>
+        <th scope="row" class="title_table">#</th>
+        <th scope="row" class="title_table">Nombre del Equipo</th>
+        <th scope="row" class="title_table">Area</th>
+        <th scope="row" class="title_table icon">Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of team;let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{item.teamName}}</td>
+        <td>{{item.areaId}}</td>
+        <td class="icon">
+          <button class="btn btn-success" [routerLink]="['teams-edit',item.teamId]">
+            <i class="fas fa-edit"></i></button>
+          <button class="btn btn-success" [routerLink]="['add-employee.ts-team',item.teamId]">
+            <i class="fa-solid fa-user-plus"></i></button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

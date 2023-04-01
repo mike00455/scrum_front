@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="title">
+    <p>Crear áreas</p>
+  </div>
+  <div>
+    <form class="area-form" [formGroup]="areaForm" (ngSubmit)="saveArea()">
+      <div class="paragraph">En este espacio podra crear el área y ver el listado de las actuales</div>
+      <div class="input-group mb-4">
+        <label class="col-sm-6">
+          <input type="text" class="form-control" placeholder="Ingrese el nombre del área" formControlName="areaName">
+        </label>
+        <button class="btn btn btn-primary mb-2" type="submit" [disabled]="areaForm.invalid">Guardar</button>
+      </div>
+    </form>
+  </div>
+  <br>
+
+<div class="title">
+  <p>Listas de áreas</p>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead class="thead-ligth">
+    <tr>
+      <th scope="row" class="title_table">#</th>
+      <th scope="row" class="title_table">Nombre del área</th>
+      <th scope="row" class="title_table icon">Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of area; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{item.areaName}}</td>
+      <td class="icon"><button type="button" class="btn btn-success" [routerLink]="['edit-area',item.areaId]"><i class="fas fa-edit"></i></button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+
+

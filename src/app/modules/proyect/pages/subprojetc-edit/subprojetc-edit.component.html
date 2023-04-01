@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="title">
+    <p> Editar Subproyecto</p>
+  </div>
+
+  <div class="form-row align-items-center">
+    <form class="userStory-form" [formGroup]="subprojectEditForm" (ngSubmit)="edit()">
+
+      <div class="form-group">
+        <label>Nombre del subproyecto</label>
+        <input type="text" class="form-control" placeholder="Ingrese el nombre del subproyecto"
+               formControlName="subprojectName">
+      </div>
+      <button class="btn btn btn-primary mb-2" type="submit" [disabled]="subprojectEditForm.invalid">Agregar</button>
+    </form>
+  </div>
+</div>

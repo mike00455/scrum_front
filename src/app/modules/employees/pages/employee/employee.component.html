@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="title">
+    <h2>Crear Empleado</h2>
+  </div>
+
+  <div class="form-row align-items-center">
+    <form class="userStory-form" [formGroup]="employeeForm" (ngSubmit)="saveEmployee()">
+
+
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend w-100 mb-3">
+          <span class="mr-sm">Nombre Del Empleado</span>
+        </div>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" formControlName="employeeName" placeholder="Ingrese el Nombre">
+        </div>
+      </div>
+
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend w-100 mb-3">
+          <span class="mr-sm">Cargo</span>
+        </div>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" formControlName="employeeCharge" placeholder="Ingrese el Cargo">
+        </div>
+      </div>
+
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend w-100 mb-3">
+          <span class="mr-sm">Correo</span>
+        </div>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" formControlName="employeeEmail" placeholder="Ingrese el Correo">
+        </div>
+      </div>
+
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend w-100 mb-3">
+          <span class="mr-sm">Conocimiento En</span>
+        </div>
+        <div class="col-sm-3">
+          <input type="text" class="form-control" formControlName="employeeKnowledge" placeholder="Ingrese el Conocimiento">
+        </div>
+      </div>
+      <div class="mb-3">
+      <button class="btn btn btn-primary mb-2"  type="submit" [disabled]="employeeForm.invalid">Guardar</button>
+      </div>
+    </form>
+
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-condensed table-hover ">
+      <thead class="thead-ligth">
+      <tr>
+        <th scope="row" class="title_table">Nombre del empleado</th>
+        <th scope="row" class="title_table">Cargo</th>
+        <th scope="row" class="title_table">Conocimiento</th>
+        <th scope="row" class="title_table icon">Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of employee">
+        <td>{{item.employeeName}}</td>
+        <td>{{item.employeeCharge}}</td>
+        <td>{{item.employeeKnowledge}}</td>
+        <td class="icon">
+          <button type="button" class="btn btn-success" [routerLink]="['employee-edit-form',item.employeeId]">
+            <i class="fas fa-edit"></i></button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  </div>

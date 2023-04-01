@@ -1,0 +1,151 @@
+<div class="container">
+  <div class="title">
+    <p> Crear Historia de usuario</p>
+  </div>
+
+  <div class="form-row align-items-center">
+    <form class="userStory-form" [formGroup]="userStoryForm" (ngSubmit)="saveStory()">
+
+      <div class="input-group mb-3">
+        <span class="mr-sm">Elija el nombre del subproyecto</span>
+        <div class="label-text">
+        <select class="form-select" formControlName="subProjectId">
+          <option *ngFor= "let item of subProjects" value="{{item.subProjectId}}">{{item.subProjectName}}</option>
+        </select>
+        </div>
+      </div>
+
+      <div class="input-group mb-3 ">
+        <span class="mr-sm ">Estado</span>
+        <div class="label-text">
+          <select class="form-select" formControlName="userStoryStateId">
+            <option value="1">Creado</option>
+            <option value="2">En Desarrollo</option>
+            <option value="3">Desarrollado</option>
+            <option value="4">Anulado</option>
+            <option value="5">Refinado</option>
+            <option value="6">Pausado</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <form>
+          <div class="form-group">
+            <span class="mr-sm">Archivo</span>
+            <input type="file" class="form-control-file" formControlName="userStoryArchive" (change)="upload_image($event)">
+          </div>
+        </form>
+      </div>
+
+      <div class="input-group input-group-sm mb-3 ">
+        <div class="input-group-prepend">
+          <span class="mr-sm ">Nombre Historia de usuario</span>
+        </div>
+        <label class="col-sm-3">
+          <input type="text" class="form-control" formControlName="userStoryName" placeholder="Ingrese el Nombre">
+        </label>
+      </div>
+
+      <button class="btn btn btn-primary mb-2" type="submit" [disabled]="userStoryForm.invalid">Guardar</button>
+    </form>
+  </div>
+
+
+  <div class="title">
+    <p class="subtitle">Historias de usuario</p>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-condensed table-hover ">
+      <thead class="thead-ligth">
+      <tr>
+        <th scope="row" class="title_table">Archivo</th>
+        <th scope="row" class="title_table">Nombre de la historia</th>
+        <th scope="row" class="title_table">Estado</th>
+        <th scope="row" class="title_table icon">Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of userStory">
+        <td>{{item.userStoryArchive}}</td>
+        <td>{{item.userStoryName}}</td>
+        <td>{{item.userStoryState.userStoryStateName}}</td>
+        <td class="icon">
+          <button type="button" class="btn btn-success" [routerLink]="['user_story_management_form',item.userStoryId]">
+            <i class="fas fa-edit"></i></button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <!--                  <div class="input-group">-->
+  <!--                    <label class="input-fill">-->
+  <!--                      <span>Elija el subproyecto</span>-->
+  <!--                      <select formControlName="subProjectId">-->
+  <!--                        <option value="1">Enlace store</option>-->
+  <!--                        <option value="2">Eon</option>-->
+  <!--                      </select>-->
+  <!--                    </label>-->
+  <!--                  </div>-->
+
+  <!--      <div class="input-group">-->
+  <!--        <label class="input-fill">-->
+  <!--          <span>Estado</span>-->
+  <!--          <select formControlName="userStoryStateId">-->
+  <!--            <option value="1">Creado</option>-->
+  <!--            <option value="2">En Desarrollo</option>-->
+  <!--            <option value="3">Desarrollado</option>-->
+  <!--            <option value="4">Anulado</option>-->
+  <!--            <option value="5">Refinado</option>-->
+  <!--            <option value="6">Pausado</option>-->
+  <!--          </select>-->
+  <!--        </label>-->
+  <!--      </div>-->
+
+
+  <!--      <div class="input-group">-->
+  <!--        <label class="input-fill_file">-->
+  <!--          <span>Archivo</span>-->
+  <!--          <input type="file" formControlName="userStoryArchive" (change)="upload_image($event)">-->
+  <!--        </label>-->
+  <!--      </div>-->
+
+  <!--      <div class="input-group">-->
+  <!--        <label class="input-fill">-->
+  <!--          <span>Nombre historia de usuario</span>-->
+  <!--          <input type="text" formControlName="userStoryName">-->
+  <!--        </label>-->
+  <!--      </div>-->
+  <!--            <button class="btn btn btn-primary mb-2" type="submit" [disabled]="userStoryForm.invalid">Guardar</button>-->
+
+
+  <!--  -->
+  <!--  <div class="title">-->
+  <!--    <p> Historias de usuario</p>-->
+  <!--  </div>-->
+  <!--  <div class="container-table">-->
+  <!--    <table class="table">-->
+  <!--      <thead class="dark">-->
+
+  <!--      <th scope="col">Archivo</th>-->
+  <!--      <th scope="col">Nombre de la Historia</th>-->
+  <!--      <th scope="col">Estado</th>-->
+  <!--      <th scope="col">Opcciones</th>-->
+  <!--      </thead>-->
+  <!--      <tbody>-->
+  <!--      <tr *ngFor="let item of userStory">-->
+  <!--        <td>{{item.userStoryArchive}}</td>-->
+  <!--        <td>{{item.userStoryName}}</td>-->
+  <!--        <td>{{item.userStoryState.userStoryStateName}}</td>-->
+  <!--        <button class="btn-login-table" [routerLink]="['user_story_management_form',item.userStoryId]">Editar</button>-->
+  <!--      </tr>-->
+  <!--      </tbody>-->
+  <!--    </table>-->
+  <!--  </div>-->
+
+
+
+

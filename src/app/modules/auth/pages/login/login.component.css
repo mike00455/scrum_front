@@ -1,0 +1,112 @@
+body{
+  font-family: 'Dosis', sans-serif;
+}
+.login-design{
+  display:grid;
+  grid-template-columns: repeat(2,50%);
+  height: 100vh;
+}
+.waves{
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 36%, rgba(0,228,255,1) 91%);
+  text-align: center;
+  border-radius: 0 2rem 0 0;
+  width: 100%;
+}
+.img-login{
+  padding: 7rem;
+  border-radius: 10rem;
+  display: flex;
+
+}
+
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-data {
+  text-align: center;
+  width:60%;
+}
+.login-data h1{
+  font-weight: 140;
+}
+
+.input-group{
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+.input-fill input{
+  border:none;
+  border-bottom: 3px solid #848f9a;
+  width: 100%;
+  height: 2rem;
+  font-size: 1.0625rem;
+  padding-left: 2rem;
+  line-height: 147.6%;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+
+}
+
+.input-fill input:focus{
+  outline: none;
+  border-color: #00e4ff;
+}
+.input-fill input:focus+ .input-label{
+  top: 0;
+  margin-bottom: 2rem;
+  color: #00e4ff;
+}
+
+.input-fill input:hover{
+  background-color: #e9ecef;
+
+}
+.input-fill .input-label{
+  position: absolute;
+  top: 15px;
+  left:5px;
+  color: #848f9a;
+  line-height: 147.6%;
+  transition: top 0.2s;
+  font-weight: 500;
+}
+.login-form a{
+  display: block;
+  width: 85%;
+  text-align: right;
+  text-decoration: none;
+  margin-bottom: 1.3rem;
+  font-weight: 500;
+  transition: .3s ease-in-out all;
+  color: #848f9a;
+}
+.login-form a:hover{
+  color: #00e4ff;
+}
+.btn-login{
+border-radius: 3rem;
+  border: 1px solid ;
+  height: 50px;
+  background-color: deepskyblue;
+  font-size: 1.3rem;
+  color: #ffffff;
+  padding: 0.5rem;
+  transition: .3s ease-in-out all;
+  font-weight: 450;
+  cursor: pointer;
+}
+.content-footer{
+  width: 100%;
+  height: 20px;
+  background: #A4C4CC;
+  text-align: center;
+}
+
+
+

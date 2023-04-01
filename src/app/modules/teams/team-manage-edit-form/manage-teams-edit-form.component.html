@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="title">
+    <p>Editar el Equipo</p>
+  </div>
+
+  <div>
+    <form [formGroup]="teamsForm" (ngSubmit)="edit()">
+      <div class="input-group mb-3">
+        <label class="mr-sm">
+          <span class="mr-sm">Seleccione el Area</span>
+          <select class="custom-select space" formControlName="areaId">
+            <option value="{{item.areaId}}" *ngFor="let item of areas">{{item.areaName}}</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="input-group">
+        <label class="input-fill">
+          <span class="mr-sm">Nombre del Equipo</span>
+          <input type="text" class="form-control" placeholder="Escriba el nombre del Equipo" formControlName="teamName">
+        </label>
+      </div>
+      <button class="btn btn btn-primary mb-2 " type="submit" [disabled]="teamsForm.invalid">Editar</button>
+    </form>
+  </div>
+</div>

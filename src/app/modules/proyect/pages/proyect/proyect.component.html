@@ -1,0 +1,41 @@
+<div class="container">
+  <span class="title">Gestionar proyectos</span>
+  <nav class="navbar navbar-light bg-light">
+    <p>Realice la busqueda correspondiente de los proyectos para listar</p>
+    <div class="search">
+      <input class="form-control mr-sm" type="search" placeholder="Buscar proyecto" aria-label="Search">
+      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+  </nav>
+
+
+  <div class="title">
+    <p>Lista de proyectos</p>
+  </div>
+  <div class="content">
+    <button type="button" class="btn btn-primary mb-2" [routerLink]="['proyect-add']">Agregar proyecto</button>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead class="thead-ligth">
+      <tr>
+        <th scope="row" class="title_table">Nombre del proyecto</th>
+        <th scope="row" class="title_table">Cliente</th>
+        <th scope="row" class="title_table">Área</th>
+        <th scope="row" class="title_table icon">Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of proyect">
+        <td>{{item.projectName}}</td>
+        <td>{{item.clientId}}</td>
+        <td>{{item.areaId}}</td>
+        <td class="icon">
+          <button type="button" class="btn btn-success" [routerLink]="['proyect-edit', item.projectId]"><i class="fas fa-edit"></i></button>
+          <button type="button" class="btn btn-success mx-2" [routerLink]="['subproject-see']"><i class="fa fa-eye"></i></button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

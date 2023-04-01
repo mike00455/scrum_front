@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="title">
+    <p>Agregar clientes</p>
+  </div>
+
+  <div>
+    <form class="customer-form" [formGroup]="customerForm" (ngSubmit)="saveCustomer()">
+      <div class="input-group mb-3">
+        <label class="mr-sm ">NIT de la empresa</label>
+        <label class="col-sm-3">
+          <input type="text" class="form-control" placeholder="Ingrese el NIT" formControlName="clientNit">
+        </label>
+      </div>
+
+      <div class="input-group mb-3">
+        <label class="mr-sm ">Razón social</label>
+        <label class="col-sm-3">
+          <input type="text" class="form-control" placeholder="Ingrese la razón social" formControlName="clientName">
+        </label>
+      </div>
+      <button class="btn btn btn-primary mb-2 " type="submit" [disabled]="customerForm.invalid">Guardar</button>
+    </form>
+  </div>
+  <br>
+
+
+  <div class="title">
+    <p>Gestión clientes</p>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead class="thead-ligth">
+      <tr>
+        <th scope="row" class="title_table">NIT</th>
+        <th scope="row" class="title_table">Razón social</th>
+        <th scope="row" class="title_table icon">Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of customer">
+        <td>{{item.clientNit}}</td>
+        <td>{{item.clientName}}</td>
+        <td class="icon">
+          <button type="button" class="btn btn-success" [routerLink]="['customer_edit_form',item.clientId]">
+            <i class="fas fa-edit"></i></button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
